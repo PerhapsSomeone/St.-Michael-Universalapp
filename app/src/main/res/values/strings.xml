@@ -20,4 +20,13 @@
     <string name="title_activity_lehrer_kuerzel">Lehrerkürzel</string>
     <string name="lehrerk_rzel">Lehrerkürzel</string>
     <string name="kuerzel_placeholder">Serveranfrage gesendet, bitte warten...</string>
+    <string name="essenbestellung">Essenbestellung</string>
+    <string name="title_activity_main_page2">MainActivityPage2</string>
+    <string name="seite_2_zeigen">Seite 2 zeigen</string>
+    <string name="title_activity_mensa_bestellung">mensa_bestellung</string>
+    <string name="title_activity_noten">Noten</string>
+    <string name="bitte_wartem_datenbank_wird_erstellt_geladen">Bitte wartem, Datenbank wird erstellt/geladen...</string>
+    <string name="zur_ck">Zurück</string>
+    <string name="noten">Noten</string>
+
 </resources>

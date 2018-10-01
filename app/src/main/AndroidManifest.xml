@@ -8,6 +8,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -37,6 +38,18 @@
         <activity
             android:name=".lehrerKuerzel"
             android:label="@string/title_activity_lehrer_kuerzel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivityPage2"
+            android:label="@string/title_activity_main_page2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mensa_bestellung"
+            android:label="@string/title_activity_mensa_bestellung"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".noten"
+            android:label="@string/title_activity_noten"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

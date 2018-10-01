@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -48,7 +49,7 @@ import java.util.concurrent.Executors;
 public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView;
-
+    private ImageView mImageView;
 
 
     @Override
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mImageView = findViewById(R.id.imageView);
+
+        mImageView.setImageResource(R.drawable.stmichaelfront);
 
         if(Constants.production) {
             MobileAds.initialize(this, "ca-app-pub-4511153742871799~9189394157");
@@ -212,6 +217,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadLehrerkuerzel(View view) {
         Intent vertIntent = new Intent(getBaseContext(), lehrerKuerzel.class);
+        vertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getBaseContext().startActivity(vertIntent);
+    }
+
+    public void loadMensa(View view) {
+        Intent vertIntent = new Intent(getBaseContext(), mensa_bestellung.class);
+        vertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getBaseContext().startActivity(vertIntent);
+    }
+
+    public void loadPageTwo(View view) {
+        Intent vertIntent = new Intent(getBaseContext(), MainActivityPage2.class);
         vertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getBaseContext().startActivity(vertIntent);
     }

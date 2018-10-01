@@ -8,53 +8,45 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="421dp"
-        android:text="@string/st_michael_universal_app"
-        app:layout_constraintBottom_toTopOf="@+id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/homepageButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginBottom="131dp"
         android:onClick="loadHomepage"
         android:text="@string/homepage"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/essenbestellungButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/vertretungsplanButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <Button
         android:id="@+id/vertretungsplanButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginBottom="160dp"
         android:onClick="loadVertretungsplan"
         android:text="@string/vertretungsplan"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/schulbistumButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:onClick="loadSchulbistum"
         android:text="@string/schulbistum"
         android:textAlignment="center"
@@ -67,8 +59,8 @@
         android:id="@+id/lehrerkuerzelButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="96dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="48dp"
         android:onClick="loadLehrerkuerzel"
         android:text="@string/lehrerk_rzel"
         android:textAlignment="center"
@@ -77,11 +69,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepageButton" />
 
+    <Button
+        android:id="@+id/essenbestellungButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:onClick="loadMensa"
+        android:text="@string/essenbestellung"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lehrerkuerzelButton" />
+
+    <Button
+        android:id="@+id/page2button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:onClick="loadPageTwo"
+        android:text="@string/seite_2_zeigen"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/essenbestellungButton" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="318dp"
+        android:layout_height="46dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
@@ -89,4 +102,18 @@
         ads:adUnitId="@string/admob_pub"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="197dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/stmichaelfront"
+        app:layout_constraintBottom_toTopOf="@+id/vertretungsplanButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/stmichaelfront"
+        android:contentDescription="Ein Bild vom St. Michael" />
 </android.support.constraint.ConstraintLayout>
