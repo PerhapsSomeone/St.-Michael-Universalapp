@@ -36,10 +36,4 @@ public class MainActivityPage2 extends AppCompatActivity {
     public void back(View view) {
         this.finish();
     }
-
-    public void loadNoten(View view) {
-        Intent vertIntent = new Intent(getBaseContext(), noten.class);
-        vertIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getBaseContext().startActivity(vertIntent);
-    }
 }

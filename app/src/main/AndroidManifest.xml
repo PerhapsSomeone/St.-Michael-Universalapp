@@ -47,10 +47,6 @@
             android:name=".mensa_bestellung"
             android:label="@string/title_activity_mensa_bestellung"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".noten"
-            android:label="@string/title_activity_noten"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
